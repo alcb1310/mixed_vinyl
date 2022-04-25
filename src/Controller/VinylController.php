@@ -2,13 +2,14 @@
 
 namespace App\Controller;
 
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class VinylController
 {
     #[Route('/')]
-    public function homepage()
+    public function homepage(): Response
     {
-        die('Vinyl Definitely NOT a fancy-looking frisbee!');
+        return new Response('Title: PB and Jams');
     }
 }
