@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 <h1>{{ title }}</h1>
 
 {# TODO: Add an image of the record #}
@@ -8,9 +12,14 @@
     <ul>
         {% for track in tracks %}
             <li>
-                {{ track.song }} - {{ track.artist }}
+                {{ track.song }} - {{ track.artist|upper|lower }}
             </li>
         {% endfor %}
     </ul>
 
 </div>
+{% endblock %}
+
+{% block title %}
+    Create a new recored
+{% endblock %}
